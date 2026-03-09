@@ -1,0 +1,120 @@
+{
+ "cells": [
+  {
+   "cell_type": "markdown",
+   "id": "460b8b3e-d78c-498b-966d-8ad63689ce26",
+   "metadata": {},
+   "source": [
+    "def get_positive_number(prompt):\n",
+    "    while True:\n",
+    "        try:\n",
+    "            value = float(input(prompt))\n",
+    "            if value > 0:\n",
+    "                return value\n",
+    "            else:\n",
+    "                print(\"Error: Please enter a number greater than 0\")\n",
+    "        except ValueError:\n",
+    "            print(\"Invalid input!Please enter a numerical value (e.g 500 0r 0.005).\")\n",
+    "\n",
+    "print(\"Simple Interest Calculator.\")\n",
+    "print(\"Enter your values below:\")\n",
+    "num1 = get_positive_number(\"Enter Principal Value:\")\n",
+    "num2 = get_positive_number(\"Enter Rate Value:\")\n",
+    "num3 = get_positive_number(\"Enter Time  Value:\")\n",
+    "\n",
+    "amount = num1 * (1 + (num2/100) * num3)\n",
+    "print (\"Amount is:\", amount)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "c5347d63-78b3-4462-9a44-b9336e9e8aa4",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "def get_positive_number(prompt):\n",
+    "    while True:\n",
+    "        try:\n",
+    "            value = float(input(prompt))\n",
+    "            if value > 0:\n",
+    "                return value\n",
+    "            else:\n",
+    "                print(\"Error: Please enter a number greater than 0\")\n",
+    "        except ValueError:\n",
+    "            print(\"Invalid input!Please enter a numerical value (e.g 500 0r 0.05).\")\n",
+    "\n",
+    "print(\"Compound Interest Calculator\")\n",
+    "print(\"Enter your values below:\")\n",
+    "principal = get_positive_number(\"Enter Principal Value:\")\n",
+    "rate = get_positive_number(\"Enter Rate Value:\")\n",
+    "time = get_positive_number(\"Enter Time Value:\")\n",
+    "n = int(get_positive_number(\"Enter n value:\"))\n",
+    "\n",
+    "amount = principal * (1 + (rate/100/n))** (n*time)\n",
+    "print(\"Amount is:\", round(amount,2))"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "9df13967-6594-4eee-9200-fc6abf21dc27",
+   "metadata": {
+    "scrolled": true
+   },
+   "outputs": [],
+   "source": [
+    "def get_positive_number(prompt):\n",
+    "    while True:\n",
+    "        try:\n",
+    "            value = float(input(prompt))\n",
+    "            if value > 0:\n",
+    "                return value\n",
+    "            else:\n",
+    "                print(\"Error: Please enter a number greater than 0\")\n",
+    "        except ValueError:\n",
+    "            print(\"Invalid input!Please enter a numerical value (e.g 500 0r 0.05).\")\n",
+    "\n",
+    "print(\"Annuity Plan Calculator\")\n",
+    "print(\"Enter your values below:\")\n",
+    "\n",
+    "pmt = get_positive_number(\"Enter PMT Value:\")\n",
+    "r = get_positive_number(\"Enter Rate Value(in whole numbers e.g 7):\")\n",
+    "n = int(get_positive_number(\"Enter Frequency(n) Value:\"))\n",
+    "t = get_positive_number(\"Enter number of years:\")\n",
+    "\n",
+    "amount = pmt * (((1 + r/100/n) ** (n*t) - 1) / (r/100/n))\n",
+    "print(\"Amount is:\", round(amount,2))"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "1e05d183-b328-4a1d-bd9f-69731be09ab3",
+   "metadata": {},
+   "outputs": [],
+   "source": []
+  }
+ ],
+ "metadata": {
+  "kernelspec": {
+   "display_name": "Python [conda env:base] *",
+   "language": "python",
+   "name": "conda-base-py"
+  },
+  "language_info": {
+   "codemirror_mode": {
+    "name": "ipython",
+    "version": 3
+   },
+   "file_extension": ".py",
+   "mimetype": "text/x-python",
+   "name": "python",
+   "nbconvert_exporter": "python",
+   "pygments_lexer": "ipython3",
+   "version": "3.13.5"
+  }
+ },
+ "nbformat": 4,
+ "nbformat_minor": 5
+}
